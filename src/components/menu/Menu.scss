@@ -1,0 +1,99 @@
+.menu {
+  max-width: 290px;
+  width: 100%;
+  border-right: 1px solid #0000001a;
+
+  &.show {
+    margin-left: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.hide {
+    position: absolute;
+    margin-left: -20px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  aside {
+    padding-top: 70px;
+    background-color: #fff;
+
+    nav {
+      ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+        a {
+          position: relative;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 500;
+          color: #292827;
+
+          span {
+            width: 0;
+            height: 0;
+            transition: .3s;
+          }
+
+          &.active {
+            font-weight: 700;
+            background-color: #eff6fc;
+
+            span {
+              width: 2px;
+              height: 100%;
+              position: absolute;
+              left: 0;
+              background-color: #2564cf;
+            }
+          }
+
+          a:not(&.active) {
+            &:hover {
+              background-color: #f2f2f2;
+            }
+          }
+
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+
+            &>div {
+              display: flex;
+              align-items: center;
+              column-gap: 20px;
+
+              .icon {
+                font-size: 18px;
+                margin-top: -2.5px;
+              }
+            }
+
+            .number_tasks {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .menu {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+
+    &.show {
+      position: absolute;
+      z-index: 1000;
+    }
+  }
+}

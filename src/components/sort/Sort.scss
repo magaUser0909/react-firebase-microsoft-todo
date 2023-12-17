@@ -1,0 +1,109 @@
+.sort {
+  position: relative;
+  color: #292827;
+
+  .btn {
+    display: flex;
+    align-items: end;
+    position: relative;
+    color: #605e5c;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 3px 10px;
+    margin-bottom: 5px;
+    margin-right: 0;
+    border: 0;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &.blue {
+      color: #2564cf;
+    }
+
+    &:hover::before {
+      content: "Сортировка";
+      position: absolute;
+      top: -40px;
+      right: 15px;
+      margin: 0 auto;
+      font-size: 12px;
+      padding: 5px 10px;
+      white-space: nowrap;
+      background-color: #fff;
+      box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.1);
+      color: #292827;
+    }
+
+    span {
+      margin: 0;
+
+      &.icon {
+        margin-right: 5px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .sorting_list {
+    width: 200px;
+    position: absolute;
+    right: 0px;
+    background-color: #fff;
+    box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+
+    div.title {
+      padding: 12px 0;
+      margin: 0;
+      font-weight: 600;
+      font-size: 14px;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 5px 0;
+      margin: 0;
+
+      li {
+        font-size: 14px;
+        padding: 5px 20px 5px 16px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f1f0f0;
+        }
+
+        .icon {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .sort {
+    .btn {
+      span {
+
+        &.icon {
+          font-size: 21px;
+        }
+      }
+
+      .title {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}

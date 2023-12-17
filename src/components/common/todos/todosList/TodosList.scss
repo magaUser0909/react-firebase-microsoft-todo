@@ -1,0 +1,16 @@
+.todos_list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {}
+
+    &::-webkit-scrollbar-thumb {
+        background: #979797;
+        border-radius: 10px;
+    }
+}

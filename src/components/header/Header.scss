@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #2564cf;
+    padding: 10px 0 10px 30px;
+
+    .logo {
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .search_block {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        .search_block {
+            margin: 0;
+            margin-left: auto;
+            margin-right: 30px;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.search_todo {
+  position: relative;
+
+  .search_icon {
+    position: absolute;
+    width: 0;
+    height: 0;
+    color: #2564cf;
+    top: 3px;
+    left: 10px;
+    cursor: pointer;
+  }
+
+  input {
+    width: 400px;
+    height: 32px;
+    padding-left: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    background-color: #fff;
+    color: #292827;
+    font-weight: 600;
+    font-size: 14px;
+    transition: .3s;
+    cursor: pointer;
+
+    &::placeholder {
+      color: #292827;
+    }
+
+    &:focus {
+      cursor: auto;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .search_todo {
+    margin-left: 10px;
+
+    input {
+      width: 0;
+
+      &:focus {
+        width: 200px;
+      }
+    }
+  }
+}

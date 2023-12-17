@@ -1,0 +1,128 @@
+.todo {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 3px;
+  box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 0 22px 0 24px;
+  border-radius: 5px;
+  color: #292827;
+
+  &:hover {
+    background-color: #f1f3f5;
+  }
+
+  button {
+    outline: none;
+    border: 0;
+    background-color: transparent;
+
+    &.icon {
+      font-size: 18px;
+      margin-top: -4px;
+
+      color: #2564cf;
+
+      &.star {
+        position: relative;
+        font-size: 20px;
+
+        &:hover::before {
+          content: "Пометка задачи как важной.";
+          position: absolute;
+          top: -30px;
+          right: -50px;
+          font-size: 12px;
+          padding: 5px 10px;
+          white-space: nowrap;
+          background-color: #fff;
+          box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.1);
+          color: #292827;
+        }
+
+        &.active:hover::before {
+          content: "Удаление отметки о важности.";
+        }
+      }
+
+      &.remove {
+        position: relative;
+        color: #a80000;
+        font-size: 20px;
+
+        &:hover::before {
+          content: "Удаление задачи.";
+          position: absolute;
+          top: -30px;
+          right: -35px;
+          font-size: 12px;
+          padding: 5px 10px;
+          white-space: nowrap;
+          background-color: #fff;
+          box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.1);
+          color: #292827;
+        }
+      }
+    }
+  }
+
+  .description {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .btn_title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 18px;
+      font-size: 14px;
+
+      span {
+        margin: 0;
+        padding: 0;
+
+        &.title {
+          &.no_active {
+            text-decoration: line-through;
+            color: #605e5c;
+          }
+        }
+
+        &.info_title {
+          position: relative;
+          color: #605e5c;
+          font-size: 12px;
+
+          &>span {
+            margin-left: 18px;
+
+            &::before {
+              width: 3px;
+              height: 3px;
+              content: "";
+              position: absolute;
+              left: 50px;
+              top: 12px;
+              background-color: #605e5c;
+              border-radius: 50%;
+            }
+
+            .icon {
+              margin-right: 5px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+}

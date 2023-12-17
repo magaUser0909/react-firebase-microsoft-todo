@@ -1,0 +1,41 @@
+.title {
+    margin-bottom: 32px;
+    margin-left: 11px;
+
+    &.active {
+        margin-left: 0;
+    }
+
+
+    &.no_active {
+        margin-left: 25px;
+    }
+
+    &>div {
+        display: flex;
+        column-gap: 10px;
+
+        .sun_icon {
+            margin-top: -9px;
+            font-size: 23px;
+
+            &.blue {
+                color: #2564cf;
+            }
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+
+            &.blue {
+                color: #2564cf;
+            }
+        }
+    }
+
+    .date {
+        color: #605e5c;
+        font-size: 12px;
+    }
+}
